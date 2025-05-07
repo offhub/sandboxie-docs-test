@@ -2,7 +2,7 @@
 site_name: Sandboxie Documentation
 site_url: https://offchu.github.io/sandboxie-docs-test/
 
-# Do not remove it, it is required for the preparation phase in publish.yml
+# Do not remove it, it is required for the preparation phase in publish.yml 
 exclude_docs: zh-CN/
 
 # Repository
