@@ -1,13 +1,13 @@
 # Project information
 site_name: Sandboxie Documentation
-site_url: https://offchu.github.io/sandboxie-docs-test/
+site_url: https://offhub.github.io/sandboxie-docs-test/
 
 # Do not remove it, it is required for the preparation phase in publish.yml 
 exclude_docs: zh-CN/
 
 # Repository
-repo_name: offchu/sandboxie-docs-test
-repo_url: https://github.com/offchu/sandboxie-docs-test
+repo_name: offhub/sandboxie-docs-test
+repo_url: https://github.com/offhub/sandboxie-docs-test
 edit_uri: edit/main/docs/
 
 # Copyright
