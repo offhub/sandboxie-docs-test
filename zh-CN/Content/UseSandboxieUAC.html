@@ -4535,14 +4535,42 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span><span class="k">[GlobalSettings]</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="na">UseSandboxieUAC</span><span class="o">=</span><span class="s">y</span>
 </span></code></pre></div>
-<h2 id="sandboxie-uac-prompt">[Sandboxie UAC Prompt]<a class="headerlink" href="#sandboxie-uac-prompt" title="Permanent link"></a></h2>
-<p>| Sandbox: DefaultBox            |
-| Program: Start.exe             |
-|                                |
-| [Yes] - Grant real admin       |
-| [No]  - Grant fake admin       |
-| [Cancel] - Deny request        |</p>
-<hr />
+<h2 id="sandboxie-uac-prompt">Sandboxie UAC Prompt<a class="headerlink" href="#sandboxie-uac-prompt" title="Permanent link"></a></h2>
+<p><img alt="" src="../../Media/SandboxieUAC.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Field/Button</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sandbox</strong></td>
+<td>The sandbox name where the request originates (e.g., "DefaultBox").</td>
+</tr>
+<tr>
+<td><strong>Program</strong></td>
+<td>The executable requesting privileges (e.g., "C:\WINDOWS\System32\cmd.exe").</td>
+</tr>
+<tr>
+<td><strong>Note</strong></td>
+<td>Explains risks of granting real admin rights and recommends fake rights for safety, though some installers may fail.</td>
+</tr>
+<tr>
+<td><strong>Yes</strong></td>
+<td>Grants real Administrator privileges (may trigger a UAC prompt).</td>
+</tr>
+<tr>
+<td><strong>No</strong></td>
+<td>Grants fake Administrator privileges (application believes it has them).</td>
+</tr>
+<tr>
+<td><strong>Cancel</strong></td>
+<td>Denies the request and aborts the program startup.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="behavior-and-configuration">Behavior and Configuration<a class="headerlink" href="#behavior-and-configuration" title="Permanent link"></a></h2>
 <p>By default, Sandboxie follows the system's UAC configuration - when User Account Control is set to prompt on the secure desktop, Sandboxie's UAC prompts will also appear there. This behavior can be modified using the <a href="PromptOnSecureDesktop.html">PromptOnSecureDesktop</a> setting to prevent sandboxed applications from displaying elevation prompts on the secure desktop.</p>
 <h2 id="related-configuration">Related Configuration<a class="headerlink" href="#related-configuration" title="Permanent link"></a></h2>
