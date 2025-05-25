@@ -12,15 +12,18 @@ Usage:
    UseSandboxieUAC=y
 ```
 
-[Sandboxie UAC Prompt]
-----------------------------------
-| Sandbox: DefaultBox            |
-| Program: Start.exe             |
-|                                |
-| [Yes] - Grant real admin       |
-| [No]  - Grant fake admin       |
-| [Cancel] - Deny request        |
-----------------------------------
+## Sandboxie UAC Prompt
+
+![](../Media/SandboxieUAC.png)
+
+| Field/Button       | Description                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| **Sandbox**        | The sandbox name where the request originates (e.g., "DefaultBox").         |
+| **Program**        | The executable requesting privileges (e.g., "C:\WINDOWS\System32\cmd.exe"). |
+| **Note**           | Explains risks of granting real admin rights and recommends fake rights for safety, though some installers may fail. |
+| **Yes**            | Grants real Administrator privileges (may trigger a UAC prompt).            |
+| **No**             | Grants fake Administrator privileges (application believes it has them).     |
+| **Cancel**         | Denies the request and aborts the program startup.                          |
 
 ## Behavior and Configuration
 
