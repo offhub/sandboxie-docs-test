@@ -4533,9 +4533,13 @@
 </span></code></pre></div>
 <ul>
 <li><strong>process</strong> (optional): The name of the executable to which the rule applies. If omitted, the rule applies to all sandboxed applications.</li>
-<li><strong>y|n</strong>:  </li>
+<li>
+<p><strong>y|n</strong>:</p>
+<ul>
 <li><code>y</code> enables fake admin rights for the specified process (or all processes if none specified)  </li>
 <li><code>n</code> disables fake admin rights for the specified process  </li>
+</ul>
+</li>
 </ul>
 <p>This option is recommended to be used in combination with <a href="DropAdminRights.html">DropAdminRights</a> to improve security. Most installers should still work with both options enabled.</p>
 <h2 id="usage-examples">Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link"></a></h2>
@@ -4555,16 +4559,20 @@
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="na">FakeAdminRights</span><span class="o">=</span><span class="s">y</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="na">FakeAdminRights</span><span class="o">=</span><span class="s">CredentialUIBroker.exe,n</span>
 </span></code></pre></div>
-<p>These examples demonstrate:
-1. Global fake admin rights
-2. Targeted fake admin rights for specific applications
-3. A mixed approach for compatibility with security-sensitive programs</p>
+<p>These examples demonstrate:</p>
+<ol>
+<li>Global fake admin rights</li>
+<li>Targeted fake admin rights for specific applications</li>
+<li>A mixed approach for compatibility with security-sensitive programs</li>
+</ol>
 <p>The third example is particularly useful when most programs need elevated privileges but certain system components must run with real permissions to function correctly.</p>
 <h3 id="what-does-fakeadmin-do">What does FakeAdmin do?<a class="headerlink" href="#what-does-fakeadmin-do" title="Permanent link"></a></h3>
-<p>When <strong>FakeAdmin</strong> is enabled:
-- The sandboxed process is tricked into believing it is running with administrator privileges.
-- This is useful for testing or running applications that require admin rights, without granting them actual admin access.
-- It helps with compatibility for programs that check for admin rights but don't really need them to function.</p>
+<p>When <strong>FakeAdmin</strong> is enabled:</p>
+<ul>
+<li>The sandboxed process is tricked into believing it is running with administrator privileges.</li>
+<li>This is useful for testing or running applications that require admin rights, without granting them actual admin access.</li>
+<li>It helps with compatibility for programs that check for admin rights but don't really need them to function.</li>
+</ul>
 <h2 id="related-configuration">Related Configuration<a class="headerlink" href="#related-configuration" title="Permanent link"></a></h2>
 <p>This setting corresponds to the GUI option in <strong>Sandboxie Plus</strong> under the following path:</p>
 <p><strong>Sandbox Options</strong> &gt; <strong>Security Options</strong> &gt; <strong>Security Hardening</strong>: <em>Make applications think they are running elevated (allows to run installers safely)</em></p>
