@@ -9,9 +9,10 @@ FakeAdminRights=[process,]y|n
 ```
 
 * **process** (optional): The name of the executable to which the rule applies. If omitted, the rule applies to all sandboxed applications.
-* **y|n**:  
-  - `y` enables fake admin rights for the specified process (or all processes if none specified)  
-  - `n` disables fake admin rights for the specified process  
+* **y|n**:
+
+    - `y` enables fake admin rights for the specified process (or all processes if none specified)  
+    - `n` disables fake admin rights for the specified process  
 
 
 This option is recommended to be used in combination with [DropAdminRights](DropAdminRights.md) to improve security. Most installers should still work with both options enabled.
@@ -47,6 +48,7 @@ FakeAdminRights=CredentialUIBroker.exe,n
 ```
 
 These examples demonstrate:
+
 1. Global fake admin rights
 2. Targeted fake admin rights for specific applications
 3. A mixed approach for compatibility with security-sensitive programs
@@ -55,6 +57,7 @@ The third example is particularly useful when most programs need elevated privil
 
 ### What does FakeAdmin do?
 When **FakeAdmin** is enabled:
+
 - The sandboxed process is tricked into believing it is running with administrator privileges.
 - This is useful for testing or running applications that require admin rights, without granting them actual admin access.
 - It helps with compatibility for programs that check for admin rights but don't really need them to function.
